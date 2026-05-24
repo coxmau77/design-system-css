@@ -1,0 +1,28 @@
+/* Buttons */
+button,
+input[type="submit"] {
+    padding: 0.7rem 1.2rem;
+    border: 2px solid var(--main-clr);
+    border-radius: 10vw;
+    background-color: var(--main-clr);
+    color: var(--light-clr);
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 500;
+    text-wrap: nowrap;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    text-shadow: 0 0 10px oklch(from var(--dark-clr) l c h / 0.5);
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    /* background-color: oklch(from var(--main-clr) l c h / 1); */
+    transition: all 0.2s ease;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--main-clr);
+}

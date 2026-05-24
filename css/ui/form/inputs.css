@@ -1,0 +1,40 @@
+input {
+    width: 100%;
+    padding: 0.7rem 1.2rem;
+    border-radius: 100vw;
+    /* background-color: light-dark(oklch(from var(--main-clr) l c h / 0.05), oklch(from var(--light-clr) l c h / 0.05)); */
+    /* background-color: light-dark(oklch(from var(--dark-clr) l c h / 0.05), oklch(from var(--light-clr) l c h / 0.05)); */
+    background-color: oklch(from var(--main-clr) l c h / 0.05);
+    /* border: 2px solid light-dark(oklch(from var(--main-clr) l c h / 0.05), oklch(from var(--light-clr) l c h / 0.05)); */
+    /* border: 2px solid light-dark(oklch(from var(--dark-clr) l c h / 0.05), oklch(from var(--light-clr) l c h / 0.05)); */
+    border: 2px solid oklch(from var(--main-clr) l c h / 0.05);
+
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    color: var(--main-clr);
+
+}
+
+input::placeholder {
+    color: inherit;
+    opacity: 0.6;
+}
+
+/* este estilo se repite en textarea */
+input:focus {
+    /* background-color: oklch(from var(--main-clr) l c h / 0.4); */
+    border: 2px solid oklch(from var(--main-clr) l c h / 0.4);
+    /* color: var(--main-clr); */
+    color: inherit;
+    outline: none;
+}
+
+input:focus::placeholder {
+    color: inherit;
+    opacity: 0.4;
+}
+
+/*
+input[type="button"],
+input[type="text"] {} */

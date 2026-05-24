@@ -1,0 +1,23 @@
+textarea {
+    /* border: none; */
+    color: var(--main-clr);
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    width: 100%;
+    border-radius: .6rem;
+    background-color: oklch(from var(--main-clr) l c h / 0.05);
+    border: 2px solid oklch(from var(--main-clr) l c h / 0.05);
+    padding: 0.7rem 1.2rem;
+}
+
+textarea::placeholder {
+    color: inherit;
+    opacity: 0.6;
+}
+
+textarea:focus {
+    border: 2px solid oklch(from var(--main-clr) l c h / 0.4);
+    color: inherit;
+    outline: none;
+}

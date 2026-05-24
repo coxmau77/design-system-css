@@ -1,0 +1,30 @@
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid var(--main-clr);
+    border-radius: 4px;
+
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--main-clr);
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✓";
+
+    color: light-dark(var(--light-clr), var(--dark-clr));
+    font-size: 1rem;
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}

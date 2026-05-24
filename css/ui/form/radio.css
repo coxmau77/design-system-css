@@ -1,0 +1,46 @@
+input[type="radio"] {
+    /* appearance: none; */
+    /* -webkit-appearance: none; */
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    border: 2px solid #6366f1;
+    border-radius: 50%;
+    background-color: #fff;
+
+    cursor: pointer;
+    position: relative;
+
+    transition: all 0.2s ease;
+}
+
+input[type="radio"]:hover {
+    border-color: #4338ca;
+}
+
+input[type="radio"]:focus {
+    outline: 2px solid #c7d2fe;
+    outline-offset: 2px;
+}
+
+input[type="radio"]:checked {
+    border-color: #6366f1;
+}
+
+input[type="radio"]:checked::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0.6rem;
+    height: 0.6rem;
+
+    border-radius: 50%;
+    background-color: #6366f1;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,88 @@
+@import url(ui/button.css);
+@import url(ui/form/inputs.css);
+@import url(ui/form/textarea.css);
+@import url(ui/form/checkbox.css);
+@import url(ui/form/radio.css);
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+
+    /* variables color (clr) */
+    --light-clr: oklch(100% 0.00011 271.152);
+    --dark-clr: oklch(12.228% 0.03425 270.859);
+    --main-clr: oklch(69.62% 0.19551 32.304);
+
+    /* variables UI colors*/
+    --error-clr: oklch(69.62% 0.19551 32.304);
+    --warning-clr: oklch(69.62% 0.19551 32.304);
+    --success-clr: oklch(90.028% 0.23587 135.652);
+    --info-clr: oklch(90.917% 0.14306 190.046);
+
+    color-scheme: light dark;
+    accent-color: var(--main-clr);
+
+    background-color: light-dark(var(--light-clr), var(--dark-clr));
+
+    /* Fuente */
+    color: light-dark(var(--dark-clr), var(--light-clr));
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+}
+
+body {
+    /* background-color: rgba(240, 248, 255, 0.151); */
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* gap: 1rem; */
+    line-height: normal;
+
+}
+
+nav {
+    background-color: rgba(0, 255, 149, 0.151);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    /* background-color: rgba(183, 0, 255, 0.151); */
+
+    padding: 1rem 1.4rem;
+    margin: .7rem;
+    border-radius: 20px;
+}
+
+header {
+    /* background-color: rgba(217, 255, 0, 0.137); */
+    background-color: transparent;
+
+}
+
+
+footer {
+    background-color: rgba(2, 0, 90, 0.267);
+}
+
+/* ------------------------ UI elements: ------------------------ */
+ol,
+ul {
+    list-style: none;
+}
+
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
