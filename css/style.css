@@ -28,6 +28,8 @@
 
     color-scheme: light dark;
     accent-color: var(--main-clr);
+    text-wrap: wrap;
+    text-wrap: balance;
 
     background-color: light-dark(var(--light-clr), var(--dark-clr));
 
@@ -48,8 +50,8 @@ body {
 }
 
 nav {
-    background-color: rgba(0, 255, 149, 0.151);
-    padding: 1rem;
+    background-color: rgba(251, 255, 0, 0.116);
+    padding: .3rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,20 +60,37 @@ nav {
 main {
     /* background-color: rgba(183, 0, 255, 0.151); */
 
-    padding: 1rem 1.4rem;
+    padding: .5rem 1.5rem;
     margin: .7rem;
     border-radius: 20px;
 }
 
+section {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+section>article {
+    background-color: light-dark(oklch(from var(--dark-clr) l c h / 0.02),
+            oklch(from var(--light-clr) l c h / 0.05));
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px dotted light-dark(oklch(from var(--dark-clr) l c h / 0.07),
+            oklch(from var(--light-clr) l c h / 0.3));
+}
+
 header {
     /* background-color: rgba(217, 255, 0, 0.137); */
-    background-color: transparent;
+    /* background-color: transparent; */
+    padding: 1rem;
 
 }
 
 
 footer {
-    background-color: rgba(2, 0, 90, 0.267);
+    background-color: light-dark(oklch(from var(--main-clr) l c h / 0.05), oklch(from var(--light-clr) l c h / 0.02));
+    padding: 1rem 1.5rem;
 }
 
 /* ------------------------ UI elements: ------------------------ */
@@ -80,6 +99,21 @@ ul {
     list-style: none;
 }
 
+p {
+    opacity: 0.7;
+}
+
+small {
+    opacity: 0.5;
+
+}
+
+hr {
+    /* color: red; */
+    /* background-color: red; */
+    border: 1px solid light-dark(oklch(from var(--main-clr) l c h / 0.1),
+            oklch(from var(--light-clr) l c h / 0.1));
+}
 
 
 a {
